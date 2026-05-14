@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+}
+
+header{
+    position: fixed;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    width: 100vw;
+}
+
+h1{
+    color: aliceblue;
+}
+
+form{
+    position: fixed;
+    bottom: 0;
+    height: 5rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+}
+
+#userInput{
+    font-size: 3rem;
+    height: 5rem;
+    /* border: 0; */
+    flex: 1
+}
+
+.submitButton{
+    font-size: 3rem;
+    height: 5rem;
+    background-color: blue;
+    /* flex: 10 */
+    color: aliceblue;
+    padding: 0 0.5rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.submitButton:hover{
+    background-color: rgba(0,0,180);
+    /* font-size: 3.5rem; */
+    transition: .5s;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5rem 0;
+}
+
+li{
+    background-color: blue;
+    color: aliceblue;
+    margin: 0.5rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.registerForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 50vh;
+    gap: 1rem;
+    background-color: blue;
+    color: white;
+    width: 10vw;
+    height: 30vh;
+}
+
+
+.registerFormMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
