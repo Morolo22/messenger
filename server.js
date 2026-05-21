@@ -18,12 +18,36 @@ const PORT = process.env.PORT || 3000;
 const server = http.createServer((req, res) => {
   if(req.method === 'GET'){
     switch(req.url) {
-        case '/': return res.end(indexHtmlFile);
-        case '/script.js': return res.end(scriptFile);
-        case '/auth.js': return res.end(authFile);
-        case '/style.css': return res.end(styleFile);
-        case '/register': return res.end(registerFile);
-        case '/login': return res.end(loginFile);
+        case '/': 
+          res.writeHead(200,{
+            'Content-Type': 'text/html'
+          });
+        return res.end(indexHtmlFile);
+        case '/script.js':
+        res.writeHead(200,{
+            'Content-Type': 'text/javascript'
+          });
+        return res.end(scriptFile);
+        case '/auth.js':
+        res.writeHead(200,{
+            'Content-Type': 'text/javascript'
+          });
+        return res.end(authFile);
+        case '/style.css':
+        res.writeHead(200,{
+            'Content-Type': 'text/CSS'
+          });
+        return res.end(styleFile);
+        case '/register':
+        res.writeHead(200,{
+            'Content-Type': 'text/html'
+          });
+        return res.end(registerFile);
+        case '/login':
+        res.writeHead(200,{
+            'Content-Type': 'text/html'
+          });
+        return res.end(loginFile);
     }
   }
 
