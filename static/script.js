@@ -6,6 +6,13 @@ const socket = io({
 const messages = document.getElementById('messages');
 const form = document.getElementById('form');
 const input = document.getElementById('userInput');
+const logOut = document.getElementById('logOut')
+
+logOut.addEventListener('click', (e)=>{
+  document.cookie = 'token=; Max-Age=0';
+  location.assign('/login')
+})
+
 
 socket.on('all_messages', function(msgArray) {
   console.log('all_messages')
