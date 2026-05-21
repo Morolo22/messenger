@@ -13,6 +13,8 @@ const registerFile = fs.readFileSync(path.join(__dirname, 'static', 'register.ht
 const authFile = fs.readFileSync(path.join(__dirname, 'static', 'auth.js'));
 const loginFile = fs.readFileSync(path.join(__dirname, 'static', 'login.html'));
 
+const PORT = process.env.PORT || 3000;
+
 const server = http.createServer((req, res) => {
   if(req.method === 'GET'){
     switch(req.url) {
@@ -106,7 +108,9 @@ function guarded(req,res){
 }
 
 
-server.listen(3000);
+server.listen(PORT, '0.0.0.0', ()=>{
+    console.log(`Running on port ${PORT}`)
+});
 
 const { Server } = require("socket.io");
 const io = new Server(server);
