@@ -9,8 +9,8 @@
     "dev": "nodemon server"
   },
   "engines": {
-    "node": "14.x"
-  },
+  "node": "20.x"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/UHJILEHEP/middleChat26.git"
