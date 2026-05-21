@@ -35,7 +35,7 @@ const server = http.createServer((req, res) => {
         return res.end(authFile);
         case '/style.css':
         res.writeHead(200,{
-            'Content-Type': 'text/CSS'
+            'Content-Type': 'text/css'
           });
         return res.end(styleFile);
         case '/register':
